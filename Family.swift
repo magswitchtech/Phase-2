@@ -30,3 +30,24 @@ var Magnetic_Ground_Clamps = [Product]()
 
 
 
+
+var MagsquareFamilyList: [(name: String, photoFilename: String, notes: String)] = [
+    
+    
+    ("Magsqure 1000", "magsquare1000", "Magsquare 1000 Notes Here"),
+    ("Magsqure 600", "magsquare600", "Magsquare 600 Notes Here"),
+    ("Magsqure 400", "magsquare400", "Magsquare 400 Notes Here"),
+    ("Magsqure 165", "magsquare165", "Magsquare 165 Notes Here")
+    
+    
+]
+
+var GroundClampFamilyList: [(name: String, photoFilename: String, notes: String)] = [
+    
+    
+    ("Magnetic Ground Clamp 800", "groundclamp800", "Clamp 800 Notes Here"),
+    ("Magnetic Ground Clamp 600", "groundclamp600", "Clamp 600 Notes Here"),
+    ("Magnetic Ground Clamp 500", "groundclamp500", "Clamp 500 Notes Here")
+    
+    
+]

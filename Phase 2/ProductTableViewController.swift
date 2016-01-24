@@ -56,7 +56,7 @@ class ProductTableViewController: UITableViewController {
         }
         
         if weldingFamilies.count == 0 {
-            var newFamily = Family(familyName: "Magsquares", familySize: 4, familyCategory: "Welding", productFamily: Magsquares)
+        var newFamily = Family(familyName: "Magsquares", familySize: 4, familyCategory: "Welding", productFamily: Magsquares)
         weldingFamilies.append(newFamily)
         
         newFamily = Family(familyName: "Magnetic Ground Clamps", familySize: 3, familyCategory: "Welding", productFamily: Magnetic_Ground_Clamps)
@@ -240,7 +240,7 @@ class ProductTableViewController: UITableViewController {
 
                 
             case 3:
-                let familyScene = segue.destinationViewController as! FamilyProductViewController
+                let familyScene = segue.destinationViewController as! ResetViewController
 
                 let selectedFamily = weldingFamilies[indexPath.row]
                 familyScene.currentFamily = selectedFamily
