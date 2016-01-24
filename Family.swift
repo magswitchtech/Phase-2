@@ -12,6 +12,7 @@ struct Family {
     
     var familyName: String
     var familySize: Int
+    var familyCategory: String
     var productFamily = [Product]()
     
 }
@@ -22,7 +23,10 @@ var automationFamilies = [Family]()
 var weldingFamilies = [Family]()
 
 
+// Family Arrays:
 
+var Magsquares = [Product]()
+var Magnetic_Ground_Clamps = [Product]()
 
 
 

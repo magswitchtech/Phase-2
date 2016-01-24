@@ -56,10 +56,10 @@ class ProductTableViewController: UITableViewController {
         }
         
         if weldingFamilies.count == 0 {
-        var newFamily = Family(familyName: "Magsquares", familySize: 4, productFamily: Magsquares)
+            var newFamily = Family(familyName: "Magsquares", familySize: 4, familyCategory: "Welding", productFamily: Magsquares)
         weldingFamilies.append(newFamily)
         
-        newFamily = Family(familyName: "Magnetic Ground Clamps", familySize: 3, productFamily: Magnetic_Ground_Clamps)
+        newFamily = Family(familyName: "Magnetic Ground Clamps", familySize: 3, familyCategory: "Welding", productFamily: Magnetic_Ground_Clamps)
         weldingFamilies.append(newFamily)
         }
  

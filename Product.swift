@@ -25,9 +25,6 @@ var liftingProducts = [Product]()
 var automationProducts = [Product]()
 var weldingProducts = [Product]()
 
-var Magsquares = [Product]()
-var Magnetic_Ground_Clamps = [Product]()
-
 
 // The addProduct Function is utilized for populating the Product arrays with Product Objects. addProduct uses the 
 // human readable and writable arrays stored in ProductLists.swift
