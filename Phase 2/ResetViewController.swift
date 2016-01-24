@@ -23,11 +23,11 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         
-        var startVC = self.viewControllerAtIndex(0) as ContentViewController
+        let startVC = self.viewControllerAtIndex(0) as ContentViewController
         
-        var viewControllers = NSArray(object: startVC)
+        let viewControllers = NSArray(object: startVC)
         
-        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
@@ -44,16 +44,16 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
     
     func viewControllerAtIndex(index: Int) -> ContentViewController {
         
-        if (currentFamily?.productFamily.count == 0 || index >= currentFamily?.productFamily.count) {
+        if (currentFamily?.familyProductArray.count == 0 || index >= currentFamily?.familyProductArray.count) {
             
             return ContentViewController()
             
         }
         
-        var vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
+        let vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
         
-        vc.imageFile = self.currentFamily?.productFamily[index].photoFilename
-        vc.titleText = self.currentFamily?.productFamily[index].name
+        vc.imageFile = self.currentFamily?.familyProductArray[index].photoFilename
+        vc.titleText = self.currentFamily?.familyProductArray[index].name
         vc.pageIndex = index
         
         return vc
@@ -67,7 +67,7 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
        
-        var vc = viewController as! ContentViewController
+        let vc = viewController as! ContentViewController
         
         var index = vc.pageIndex as Int
         
@@ -85,7 +85,7 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        var vc = viewController as! ContentViewController
+        let vc = viewController as! ContentViewController
         
         var index = vc.pageIndex as Int
         
@@ -97,7 +97,7 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
         
         index++
         
-        if (index == self.currentFamily?.productFamily.count){
+        if (index == self.currentFamily?.familyProductArray.count){
             
             return nil
             
@@ -109,7 +109,7 @@ class ResetViewController: UIViewController, UIPageViewControllerDataSource{
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
        
-        return self.currentFamily!.productFamily.count
+        return self.currentFamily!.familyProductArray.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

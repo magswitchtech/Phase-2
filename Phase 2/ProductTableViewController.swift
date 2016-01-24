@@ -13,55 +13,6 @@ class ProductTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        if woodworkingProducts.count == 0 {     //  A sorta hacky fix for the moment. Consider a cleaner way to handle.
-            
-            
-        for something in WoodworkingProductList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "Woodworking", notes: something.notes)
-            
-        }
-        
-        for something in LiftingProductList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "Lifting", notes: something.notes)
-            
-        }
-        
-        for something in AutomationProductList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "Automation", notes: something.notes)
-            
-        }
-        
-        for something in WeldingProductList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "Welding", notes: something.notes)
-            
-        }
-        
-        for something in MagsquareFamilyList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "MagSquares", notes: something.notes)
-            
-        }
-        
-        for something in GroundClampFamilyList {
-            
-            addProduct(something.name, photoFilename: something.photoFilename, category: "Ground Clamps", notes: something.notes)
-            
-        }
-        }
-        
-        if weldingFamilies.count == 0 {
-        var newFamily = Family(familyName: "Magsquares", familySize: 4, familyCategory: "Welding", productFamily: Magsquares)
-        weldingFamilies.append(newFamily)
-        
-        newFamily = Family(familyName: "Magnetic Ground Clamps", familySize: 3, familyCategory: "Welding", productFamily: Magnetic_Ground_Clamps)
-        weldingFamilies.append(newFamily)
-        }
  
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -87,19 +38,19 @@ class ProductTableViewController: UITableViewController {
         switch section {
             
         case 0:
-            return woodworkingProducts.count
+            return weldingSection.count
             
         case 1:
-            return liftingProducts.count
+            return woodworkingSection.count
             
         case 2:
-            return automationProducts.count
+            return heavyliftingSection.count
             
         case 3:
-            return weldingFamilies.count
+            return automationSection.count
             
         default:
-            return 50
+            return 0
             
         }
         
@@ -112,39 +63,37 @@ class ProductTableViewController: UITableViewController {
         switch indexPath.section{
             
         case 0:
-            let productCell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath)
-            let currentProduct = woodworkingProducts[indexPath.row]
-            productCell.textLabel?.text = currentProduct.name
-            return productCell
+            let familyCell = tableView.dequeueReusableCellWithIdentifier("familyCell", forIndexPath: indexPath)
+            let currentFamily = weldingSection[indexPath.row]
+            familyCell.textLabel?.text = currentFamily.familyName
+            return familyCell
             
             
         case 1:
-            let productCell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath)
-            let currentProduct = liftingProducts[indexPath.row]
-            productCell.textLabel?.text = currentProduct.name
-            return productCell
+            let familyCell = tableView.dequeueReusableCellWithIdentifier("familyCell", forIndexPath: indexPath)
+            let currentFamily = woodworkingSection[indexPath.row]
+            familyCell.textLabel?.text = currentFamily.familyName
+            return familyCell
             
         case 2:
-            let productCell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath)
-            let currentProduct = automationProducts[indexPath.row]
-            productCell.textLabel?.text = currentProduct.name
-            return productCell
+            let familyCell = tableView.dequeueReusableCellWithIdentifier("familyCell", forIndexPath: indexPath)
+            let currentFamily = heavyliftingSection[indexPath.row]
+            familyCell.textLabel?.text = currentFamily.familyName
+            return familyCell
             
             
         case 3:
             let familyCell = tableView.dequeueReusableCellWithIdentifier("familyCell", forIndexPath: indexPath)
-            let currentProduct = weldingFamilies[indexPath.row]
-            familyCell.textLabel?.text = currentProduct.familyName
+            let currentFamily = automationSection[indexPath.row]
+            familyCell.textLabel?.text = currentFamily.familyName
             return familyCell
             
             
         default:
-            let productCell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath)
-            let currentProduct = woodworkingProducts[indexPath.row]
-            productCell.textLabel?.text = currentProduct.name
-            return productCell
-            
-            
+            let familyCell = tableView.dequeueReusableCellWithIdentifier("familyCell", forIndexPath: indexPath)
+            let currentFamily = weldingSection[indexPath.row]
+            familyCell.textLabel?.text = currentFamily.familyName
+            return familyCell
         }
         
         
@@ -220,36 +169,33 @@ class ProductTableViewController: UITableViewController {
             switch indexPath.section{
                 
             case 0:
-                let productScene = segue.destinationViewController as! ProductViewController
-                let selectedProduct = woodworkingProducts[indexPath.row]
-                productScene.currentProduct = selectedProduct
+                let familyScene = segue.destinationViewController as! ResetViewController
+                let selectedFamily = weldingSection[indexPath.row]
+                familyScene.currentFamily = selectedFamily
 
                 
             case 1:
-                let productScene = segue.destinationViewController as! ProductViewController
-
-                let selectedProduct = liftingProducts[indexPath.row]
-                productScene.currentProduct = selectedProduct
+                let familyScene = segue.destinationViewController as! ResetViewController
+                let selectedFamily = woodworkingSection[indexPath.row]
+                familyScene.currentFamily = selectedFamily
 
                 
             case 2:
-                let productScene = segue.destinationViewController as! ProductViewController
-
-                let selectedProduct = automationProducts[indexPath.row]
-                productScene.currentProduct = selectedProduct
+                let familyScene = segue.destinationViewController as! ResetViewController
+                let selectedFamily = heavyliftingSection[indexPath.row]
+                familyScene.currentFamily = selectedFamily
 
                 
             case 3:
                 let familyScene = segue.destinationViewController as! ResetViewController
-
-                let selectedFamily = weldingFamilies[indexPath.row]
+                let selectedFamily = automationSection[indexPath.row]
                 familyScene.currentFamily = selectedFamily
 
             default:
                 
-                let productScene = segue.destinationViewController as! ProductViewController
-                let selectedProduct = woodworkingProducts[indexPath.row]
-                productScene.currentProduct = selectedProduct
+                let familyScene = segue.destinationViewController as! ResetViewController
+                let selectedFamily = weldingSection[indexPath.row]
+                familyScene.currentFamily = selectedFamily
             }
             
         }
