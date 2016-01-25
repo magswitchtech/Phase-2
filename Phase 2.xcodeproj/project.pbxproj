@@ -15,13 +15,12 @@
 		CF09FB7B1C4729B500B0CC6C /* Phase_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB7A1C4729B500B0CC6C /* Phase_2UITests.swift */; };
 		CF09FB891C472C8600B0CC6C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB881C472C8600B0CC6C /* Product.swift */; };
 		CF09FB8D1C472D7500B0CC6C /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB8C1C472D7500B0CC6C /* ProductTableViewController.swift */; };
-		CF09FB8F1C472DA300B0CC6C /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB8E1C472DA300B0CC6C /* ProductViewController.swift */; };
 		CF09FB911C472DBC00B0CC6C /* ShopifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB901C472DBC00B0CC6C /* ShopifyViewController.swift */; };
 		CF09FB931C472DD800B0CC6C /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09FB921C472DD800B0CC6C /* CalculateViewController.swift */; };
-		CFB94B211C504C8C00BAA0A4 /* ProductLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B201C504C8C00BAA0A4 /* ProductLists.swift */; };
-		CFB94B251C50714300BAA0A4 /* FamilyProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B241C50714300BAA0A4 /* FamilyProductViewController.swift */; };
 		CFB94B271C5071B800BAA0A4 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B261C5071B800BAA0A4 /* Family.swift */; };
 		CFB94B291C51E13100BAA0A4 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B281C51E13100BAA0A4 /* MainMenuViewController.swift */; };
+		CFB94B811C551B7500BAA0A4 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B801C551B7500BAA0A4 /* ContentViewController.swift */; };
+		CFB94B831C551C3C00BAA0A4 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB94B821C551C3C00BAA0A4 /* ResetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +55,12 @@
 		CF09FB7C1C4729B500B0CC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF09FB881C472C8600B0CC6C /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CF09FB8C1C472D7500B0CC6C /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
-		CF09FB8E1C472DA300B0CC6C /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		CF09FB901C472DBC00B0CC6C /* ShopifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopifyViewController.swift; sourceTree = "<group>"; };
 		CF09FB921C472DD800B0CC6C /* CalculateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
-		CFB94B201C504C8C00BAA0A4 /* ProductLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductLists.swift; sourceTree = "<group>"; };
-		CFB94B241C50714300BAA0A4 /* FamilyProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FamilyProductViewController.swift; path = ../FamilyProductViewController.swift; sourceTree = "<group>"; };
 		CFB94B261C5071B800BAA0A4 /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		CFB94B281C51E13100BAA0A4 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		CFB94B801C551B7500BAA0A4 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		CFB94B821C551C3C00BAA0A4 /* ResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 			children = (
 				CF09FB881C472C8600B0CC6C /* Product.swift */,
 				CFB94B261C5071B800BAA0A4 /* Family.swift */,
-				CFB94B201C504C8C00BAA0A4 /* ProductLists.swift */,
 				CF09FB591C4729B500B0CC6C /* Phase 2 */,
 				CF09FB6E1C4729B500B0CC6C /* Phase 2Tests */,
 				CF09FB791C4729B500B0CC6C /* Phase 2UITests */,
@@ -119,13 +116,13 @@
 				CF09FB5A1C4729B500B0CC6C /* AppDelegate.swift */,
 				CF09FB921C472DD800B0CC6C /* CalculateViewController.swift */,
 				CF09FB5E1C4729B500B0CC6C /* Main.storyboard */,
+				CFB94B821C551C3C00BAA0A4 /* ResetViewController.swift */,
+				CFB94B801C551B7500BAA0A4 /* ContentViewController.swift */,
 				CFB94B281C51E13100BAA0A4 /* MainMenuViewController.swift */,
 				CF09FB611C4729B500B0CC6C /* Assets.xcassets */,
 				CF09FB631C4729B500B0CC6C /* LaunchScreen.storyboard */,
 				CF09FB661C4729B500B0CC6C /* Info.plist */,
 				CF09FB8C1C472D7500B0CC6C /* ProductTableViewController.swift */,
-				CFB94B241C50714300BAA0A4 /* FamilyProductViewController.swift */,
-				CF09FB8E1C472DA300B0CC6C /* ProductViewController.swift */,
 				CF09FB901C472DBC00B0CC6C /* ShopifyViewController.swift */,
 			);
 			path = "Phase 2";
@@ -280,15 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB94B211C504C8C00BAA0A4 /* ProductLists.swift in Sources */,
 				CF09FB891C472C8600B0CC6C /* Product.swift in Sources */,
 				CFB94B271C5071B800BAA0A4 /* Family.swift in Sources */,
-				CFB94B251C50714300BAA0A4 /* FamilyProductViewController.swift in Sources */,
 				CF09FB8D1C472D7500B0CC6C /* ProductTableViewController.swift in Sources */,
-				CF09FB8F1C472DA300B0CC6C /* ProductViewController.swift in Sources */,
 				CFB94B291C51E13100BAA0A4 /* MainMenuViewController.swift in Sources */,
 				CF09FB911C472DBC00B0CC6C /* ShopifyViewController.swift in Sources */,
+				CFB94B811C551B7500BAA0A4 /* ContentViewController.swift in Sources */,
 				CF09FB5B1C4729B500B0CC6C /* AppDelegate.swift in Sources */,
+				CFB94B831C551C3C00BAA0A4 /* ResetViewController.swift in Sources */,
 				CF09FB931C472DD800B0CC6C /* CalculateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
